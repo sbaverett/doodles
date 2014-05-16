@@ -1,11 +1,5 @@
 #!/usr/bin/env node
 
-// // console.log(process.argv);
-
-// var calculations = require('./calculations.js');
-
-// console.log('The sum is ' + sum)
-
 
 /**
  * Module dependencies.
@@ -18,19 +12,23 @@ var calculations = require('./calculations.js');
 program
   .version('0.0.1')
   .option('-a, --add', 'add')
-  .option('-s, --subtract', 'subtract')
+  .option('-s, --sub', 'subtract')
   .parse(process.argv);
 
-if(program.add) {
 
-	var num1 = (parseInt(program.args[0]));
-	var num2 = (parseInt(program.args[1]));
-	// var num = parseInt[num1, num2];
-	sum = calculations.add(num1, num2);
+var num1 = (parseInt(program.args[0]));
+var num2 = (parseInt(program.args[1]));
+
+// if(program.add) {
+// 	sum = calculations.add(num1, num2);
+// console.log(program.args[0] + ' + ' + program.args[1] + ' is ' + sum + '.');
+
+// }
+
+if(program.sub) {
+	_ = calculations.sub(num1, num2);
+console.log(program.args[0] + ' - ' + program.args[1] + ' is ' + _ + '.');
 
 
-	var sum = calculations.add(num1, num2);
-	
 }
 
-console.log(program.args[0] + ' + ' + program.args[1] + ' is ' + sum + '.');
