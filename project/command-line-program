@@ -18,17 +18,18 @@ var calculations = require('./calculations.js');
 program
   .version('0.0.1')
   .option('-a, --add', 'add')
+  .option('-s, --subtract', 'subtract')
   .parse(process.argv);
 
 if(program.add) {
 
-	// var num1 = (program.args[0]);
-	// var num2 = (program.args[1]);
+	var num1 = (parseInt(program.args[0]));
+	var num2 = (parseInt(program.args[1]));
 	// var num = parseInt[num1, num2];
-	// sum = calculations.add(num);
+	sum = calculations.add(num1, num2);
 
 
-	var sum = calculations.add(parseInt(program.args[0]), parseInt(program.args[1]));
+	var sum = calculations.add(num1, num2);
 	
 }
 

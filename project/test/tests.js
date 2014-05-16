@@ -8,5 +8,11 @@ describe('command-line-project', function() {
 			expect(calculations.add(1, 5)).to.eql(6);
 		
 	})
-})
 
+
+	it('subtracts two numbers', function() {
+		expect(calculations.sub(59, 17)).to.eql(42);
+
+	})
+
+})
