@@ -19,16 +19,15 @@ program
 var num1 = (parseInt(program.args[0]));
 var num2 = (parseInt(program.args[1]));
 
-// if(program.add) {
-// 	sum = calculations.add(num1, num2);
-// console.log(program.args[0] + ' + ' + program.args[1] + ' is ' + sum + '.');
+if(program.add) {
+	sum = calculations.add(num1, num2);
+console.log(program.args[0] + ' + ' + program.args[1] + ' is ' + sum + '.');
 
-// }
+}
 
 if(program.sub) {
 	_ = calculations.sub(num1, num2);
 console.log(program.args[0] + ' - ' + program.args[1] + ' is ' + _ + '.');
-
 
 }
 
