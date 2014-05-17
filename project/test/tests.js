@@ -15,4 +15,8 @@ describe('command-line-project', function() {
 
 	})
 
+	it('multiplies two numbers', function() {
+		expect(calculations.mult(6, 6)).to.eql(36);
+	})
+
 })
