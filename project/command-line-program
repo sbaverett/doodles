@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 /**
  * Module dependencies.
  */
@@ -14,25 +13,31 @@ program
   .option('-a, --add', 'add')
   .option('-s, --sub', 'subtract')
   .option('-m, --mult', 'multiply')
+  .option('-d, --div', 'divide')
   .parse(process.argv);
 
 var num1 = (parseInt(program.args[0]));
 var num2 = (parseInt(program.args[1]));
 
 if(program.add) {
-	_ = calculations.add(num1, num2);
-	console.log(num1 + ' + ' + num2 + ' is ' + _ + '.');
+	n = calculations.add(num1, num2);
+	console.log(num1 + ' + ' + num2 + ' is ' + n + '.');
 
 }
 
 if(program.sub) {
-	_ = calculations.sub(num1, num2);
-	console.log(num1 + ' - ' + num2 + ' is ' + _ + '.');
+	n = calculations.sub(num1, num2);
+	console.log(num1 + ' - ' + num2 + ' is ' + n + '.');
 
 }
 
 if(program.mult) {
-	_ = calculations.mult(num1, num2);
-	console.log(num1 + ' * ' + num2 + ' is ' + _ + '.');
+	n = calculations.mult(num1, num2);
+	console.log(num1 + ' * ' + num2 + ' is ' + n + '.');
+
+}
+if(program.div) {
+	n = calculations.div(num1, num2);
+	console.log(num1 + ' / ' + num2 + ' is ' + n + '.');
 
 }
