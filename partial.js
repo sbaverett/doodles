@@ -1,4 +1,5 @@
-
+/* jshint node: true */
+'use strict'
 
 var partial = function(fn, arg1) {
 	return function(arg2) {

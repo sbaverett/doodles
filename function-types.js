@@ -1,13 +1,19 @@
+/* jshint node: true */
+'use strick';
+
 // functions can have arrays, objects, parameters, arguments, strings, method; 
-// functions are declared and called
+// functions are declared and called; arguments are passed
 
-var thing;
+var thing = function(a, b) {
 
-var stungun() {
-	if (something);
-	thing = 5
-}
-function(thing) {
+};
 
+stungun();
+buckets(array, dogs); 
+
+	if (dogthing);
+	thing = 5;
+
+function() {
 	a = 5;
 }

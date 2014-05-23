@@ -15,7 +15,7 @@ var once = function(fn) {
 };
 
 var findTrueLove = once(function() {
-  console.log("If this message prints only one time then the code is OK.");
+  console.log("If this message prints only one time, the code is OK.");
 });
 findTrueLove();
 findTrueLove();
