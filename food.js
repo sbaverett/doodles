@@ -1,6 +1,9 @@
 //starting with Whitney's each, I used it
 //to iterate my array called food using item
 
+// var map = require('./puralize.js');
+
+
 var each = function(array, fn) {
   var continueIterating = function(array, n, fn) {
     if (n < array.length) {
@@ -12,16 +15,26 @@ var each = function(array, fn) {
 };
 
 var food = ['egg', 'meat', 'bread'];
-	each(food, function(item) {
-	// console.log(item);
+each(food, function(item) {
+	console.log(item);
+  console.log(item+"s");
 
+var map = function(array, fn) {
+  var 
+}
+
+var item = map(function(x) {return x + 's'}, food); {
+
+  console.log(map);
+}
+});
 //now I want to see if I can use map to change the array
 
-var foods = (food);
-	console.log(item+"s");
-});
 
 
+// map.map(food, function(item) {
+//     console.log(item)
+//     });
 // var pluralize = require('./pluralize.js');
 //  pluralize.map([1,2,3], function(n) {
 //  console.log(n);

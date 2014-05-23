@@ -1,0 +1,11 @@
+var fs = require('fs');
+
+
+var file = process.argv[2];
+// var file = './message.json';
+var options ={encoding: 'utf8'};
+fs.readFile(file, options, function(err, contents) {
+	var obj = JSON.parse(contents);
+	console.log ('%j', contents.message);
+	console.log ('%j', obj.message);
+});

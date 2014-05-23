@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var file = process.argv[2];
+
+var options = { encoding: 'utf8' };
+fs.readFile(file, options, function(err, contents) {
+  // var string = '{\n  "message": "This message is stored in the JSON file."\n}';
+  // if (contents === string) {
+  //   console.log('cool');
+  // }
+
+
+  var obj = JSON.parse(contents);
+
+  // obj = {
+  //   message: 'This message is stored in the JSON file.'
+  // };
+
+  console.log('%s', obj.message);
+});
