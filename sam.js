@@ -68,14 +68,121 @@ cities.forEach(function(aCity) {
 	console.log(aCity.name);
 });
 // somehow make a new array, cityNames, that's each city's name
+var cityNames = [];
+cities.forEach(function(aCity) {
+	cityNames.push(aCity.name);
+});
+console.log(cityNames);
+
 // somehow make a new array, peopleNames, that's each person's name
+var peopleNames = [];
+people.forEach(function(aPerson) {
+	peopleNames.push(aPerson.name);
+});
+console.log(peopleNames);
+
 // somehow make a new array, cityStates, that's each city's state
+var cityStates = [];
+cities.forEach(function(aCity) {
+	cityStates.push(aCity.state);
+});
+console.log(cityStates);
 // somehow make a new array, peopleAges, that's each person's age
+var peopleAges = [];
+people.forEach(function(aPerson) {
+	peopleAges.push(aPerson.age);
+});
+console.log(peopleAges);
+
+
+// somehow make a new array, cityNames, that's each city's name
+var cityNames1 = cities.map(function(aCity) {
+	return aCity.name;
+});
+console.log(cityNames1);
+
+// somehow make a new array, peopleNames, that's each person's name
+var peopleNames1 = people.map(function(aPerson) {
+	return aPerson.name;
+});
+console.log(peopleNames1);
+
+// somehow make a new array, cityStates, that's each city's state
+var cityStates1 = cities.map(function(aCity) {
+	return aCity.state;
+});
+console.log(cityStates1);
+
+// somehow make a new array, peopleAges, that's each person's age
+var peopleAges1 = people.map(function(aPerson) {
+	return aPerson.age;
+});
+console.log(peopleAges1);
 
 // find the person from the array people with the name "Sam"
+var steve;
+people.forEach(function(aPerson) {
+	if (aPerson.name === 'Steve') {
+		steve = aPerson;
+	}
+});
+console.log(steve);
 
 // find the city from the array cities with the state "Oregon"
+var cityInOregon;
+cities.forEach(function(aCity) {
+	if (aCity.state.toLowerCase() === 'oregon') {
+		cityInOregon = aCity;
+	}
+});
+console.log(cityInOregon);
 
 // find all people who are younger than 50
+var youngPeople = [];
+people.forEach(function(aPerson) {
+	if (aPerson.age < 50) {
+		youngPeople.push(aPerson); 
+	}
+});
+console.log(youngPeople);
 
 // find all cities that are in the state "Maryland"
+var citiesInMaryland = [];
+cities.forEach(function(aCity) {
+	if (aCity.state === 'Maryland') {
+		citiesInMaryland.push (aCity);
+	}
+});
+console.log(citiesInMaryland);
+
+// find all people who are younger than 50
+var youngPeople1 = people.filter(function(aPerson) {
+	return aPerson.age < 50;
+})
+console.log(youngPeople1);
+
+// find all cities that are in the state "Maryland"
+var citiesInMaryland1 = cities.filter(function(aCity) {
+	return aCity.state === 'Maryland';
+})
+console.log(citiesInMaryland1);
+
+// find the names of all of the people who are younger than 50 with filter & map
+var namesOfYoungPeople = people
+	.filter(function(aPerson) {
+		return aPerson.age < 50;
+	})
+	.map(function(aPerson) {
+		return aPerson.name;	
+	});
+console.log(namesOfYoungPeople); 
+
+// find the names of all of the cities that are in "Maryland" with filter & map
+var namesOfCitiesInMaryland = cities
+	.filter(function(aCity) {
+		return aCity.state === 'Maryland';
+	})
+	.map(function(aCity) {
+		return aCity.name;
+	});
+console.log(namesOfCitiesInMaryland);

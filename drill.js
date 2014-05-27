@@ -37,6 +37,7 @@ var namesOfPeople = person.map(function(person) {
 console.log(namesOfPeople);
 
 // Use each to increment every person’s age: Jill is now 28, etc.
+// the person objects are lost which i think is wrong result
 var personAgePlusOne1 = [];
 person.forEach(function(individual) {
 	personAgePlusOne1.push(individual.name, individual.age + 1);
@@ -53,4 +54,9 @@ console.log(personAgePlusOne);
 // another variation that increments each person’s age & gives back an array of
 // the ages before they were incremented. So now Jill is 28, but we get an array of
 // 27, 35, 12, 44
-
+var ageOfPerson = person.map(function(person) {
+	return person.age + 1;
+console.log(person);
+console.log(ageOfPerson);
+});
+console.log(person);
