@@ -54,9 +54,19 @@ console.log(personAgePlusOne);
 // another variation that increments each person’s age & gives back an array of
 // the ages before they were incremented. So now Jill is 28, but we get an array of
 // 27, 35, 12, 44
-var ageOfPerson = person.map(function(person) {
-	return person.age + 1;
+var ageOfPerson = person.map(function(individual) {
+	return individual.age + 1;
 console.log(person);
 console.log(ageOfPerson);
 });
 console.log(person);
+
+// Make a few city objects that have a name and a state
+// Update your array of people so that each one also has a city that they live in. 
+// Ex Jill in Portland OR, Ryan in Chicago IL, Al in Portland OR, Susan in Portland ME
+// Make sure that you use the same exact object when two people live in the same city
+// Use map to get back the names of the cities that people live in: 
+// Portland, Chicago, Portland, Portland
+
+var city = [{name: 'Portland', state: 'Oregon'}, {name: 'Miami', state: 'Florida'}]
+console.log(city);

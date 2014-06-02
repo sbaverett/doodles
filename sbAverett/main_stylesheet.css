@@ -1,0 +1,147 @@
+/*This is the primary stylesheet for sbAverett web site.*/
+
+html {
+	margin: 0;
+	padding: 0;
+
+}
+body {
+  width: auto;	
+  font-size: 1.1em;
+  font-family: calibri;
+  background-color: black;
+  /*color: black;*/
+ 
+}
+
+p {
+  font-size: 1em;
+  width: 60%;
+  color: white;
+  margin: .3em 1.5em 0em 1.5em;
+  font-weight: normal; 
+  padding-bottom: .5em;
+  padding-top: .5em;
+
+}
+
+h2 {
+ 
+  font-size: 3em;
+  width: 90%;
+  color: #EBD145;
+  margin: .25em .5em 0em .5em;
+  font-weight: bold;
+ 
+}
+
+footer {
+  
+  width: 100%;
+  height: 2em;
+  font-size: .80em;
+  text-align: center;
+  padding-top: 1em;
+  background-color: white;
+  color: black;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	/*left: 5em;*/
+	width: 100%;
+	min-width: 33em;
+
+	/*height: 2em;*/
+	font-family: calibri;
+	font-style: bold;
+	
+	background-color: white;
+
+	border: none;
+}
+	
+.logo a {
+	text-decoration: none;
+	color: black;
+	padding: 1em 0 0 4em;
+	float: left;
+}
+
+.logo a:hover {
+	color: #EBD145;
+} 
+
+.background_image {
+	
+	background-image: url("img_0933.jpg");
+	background-size: cover;
+	background-position: 100% 0%;
+	width: auto;
+	min-height: 27em;
+	
+}
+
+.background_image2 {
+	
+	background-image: url("resume.jpg");
+	background-size: cover;
+	background-position: 100% 0%;
+	width: auto;
+	min-height: 27em;
+	
+}
+
+.content_container {
+	width: 90%;
+	background-color: black;
+	padding: 0 0 1.5em 2em;
+}
+
+.content_border {
+	position: relative;
+	left: 0;
+	width: 100%;
+	border-top: .75em solid #EBD145;
+
+}
+
+#navigation {
+	/*position: relative;*/
+	/*top: 1em;
+	left: 12em;
+	width: 75%;
+	height: 10em;
+	text-align: center;*/
+	/*padding-top: .9em;
+	padding-bottom: .1em;
+
+	background-color: white;
+	opacity: .6;*/
+	float: right;
+	margin-right: 5%; 
+
+
+
+	/* Adds shadow to the bottom of the bar 
+	-webkit-box-shadow: 0px 0px 8px 0px #000000;
+	-moz-box-shadow: 0px 0px 8px 0px #000000;
+	box-shadow: 0px 0px 8px 0px #000000;
+	Adds the transparent background  
+	background-color: rgba(32, 29, 23, 0.8);
+	color: rgba(1, 1, 1, 0.8);*/
+}
+
+#navigation a {
+	font-size: 1em;
+	padding: 2.6em 1em 0 1em;
+	color: black;
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	color: gold;
+} 
+ 
