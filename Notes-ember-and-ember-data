@@ -1,0 +1,46 @@
+Ember and Ember Data connect the front end to the back end, allowing the Web site 
+
+Routes, models 
+are tied together in the front end by the router, route definitions and model hooks.
+
+When asked to render something, Ember starts with the URL and looks for a route associated with that path. From the route, Ember looks for a template associated with the route, then for a model hook that points to a Model that is associated with a table in the database.
+
+When asked to render /pours, Ember looks for a route called pours.
+
+TapApp.Router.map(function() {
+  this.route('signup');
+  this.route('login');
+  this.route('logout');
+  this.route('profile');
+  this.route('addPour');
+  this.route('pours');
+});
+
+Ember next looks for a handlebars template named pours.hbs, which includes the following information about what to render and how to display the content:
+
+File named pours.hbs includes this content.
+<h1>Pours</h1>
+<ul class="pours">
+{{#each}}
+  <li>{{brewery}} {{beerName}} {{venue}} {{beerRating}}</li>
+{{/each}}
+</ul>
+
+Now Ember looks for a model hook associated with the pours route. This is also called the route definition. The model hook points to a "store" that represents a "collection" that is associated with a DS.Model called Pour.
+
+TapApp.PoursRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('pour');
+  }
+});
+
+Ember data also finds the DS.Model called Pour, which includes information about the properties of the JSON object through which Ember will eventally iterate so that it can render pours at /pours.   
+
+TapApp.Pour = DS.Model.extend({
+  brewery: DS.attr('string'),
+  beerName: DS.attr('string'),
+  venue: DS.attr('string'),
+  beerRating: DS.attr('number')
+});
+
+The model hook above facilitates a request to the server by way of the api, which results in a GET request from the server to the DB.

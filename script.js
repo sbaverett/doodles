@@ -37,10 +37,21 @@ Array.prototype.forEach.call(headers, function(header) {
 	if(header.parentNode.tagName === 'ARTICLE') {
 			header.addEventListener("click", function() { toggle(header); }, false);
 			console.log(header);
-	}
-
-	// document.getElementsByTagName('article')[0].setAttribute('style', 'display: none');
-		
+	}		
 });
 
+var highlight = function(articleBody) {
+	if(article.getAttribute('class') === "alt-article")
+		article.setAttribute('class', 'article')
+		else(article.setAttribute('class', 'alt-article'))
+};
+
+var articleBody = document.getElementsByTagName('article');
+console.log(articleBody);
+Array.prototype.forEach.call(articleBody, function(article) {
+	if(articleBody.parentNode.tagName === 'ARTICLE') {
+		articleBody.addEventListener('click', function() { highlight(articleBody); }, false);
+		console.log(articleBody);
+	}	
+});
 

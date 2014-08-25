@@ -1,0 +1,41 @@
+
+• pods/user.js: TapApp.User = DS.Model.extend with bio
+
+pods/profile.js: has a poursController with this:
+    var user = this.store.find('user', this.get('session.id'));
+    NB: the profileRoute has a poursController which may mean that the addPoursRoute should have a poursConroller: I'm thinking yes
+
+
+//templates/profile.hbs displays this:
+    {{#if user.displayName}}
+      <br>
+      <div class="profile">
+        <h3>{{user.displayName}}</h3>
+        <p>"{{user.bio}}"</p>
+      </div>
+    {{/if}}
+
+server/applications.js
+  api.get('/users/:id', function(req, res) {
+    User.where({ id: req.params.id })
+    .fetch()
+    .then(function(user) {
+      res.json({ 'user': user.toJSON() });
+    }).done();
+  });
+
+api.get('/breweries/', function(req, res) {
+  Pour.where({ brewery: req.params.brewery })
+  .fetch()
+  .then(function('addPour') {
+    res.json({ 'addPour': addPour.toJSON() });
+  }).done();
+});
+
+    var makeAjaxRequest = function() {
+    var url='/breweries/search';
+    $.ajax(url, {
+      data: userInput
+    });
+    console.log(userInput);
+    },

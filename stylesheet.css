@@ -1,0 +1,13 @@
+// style for article
+
+article p {
+	display: inline-block;
+}
+
+.article {
+	background-color: red;
+}
+
+.alt-article {
+	background-color: pale blue;
+}

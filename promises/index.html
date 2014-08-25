@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promise</title>
+</head>
+<body>
+<script src="jquery-2.1.1.js"></script>
+<script>
+
+var url = "https://raw.githubusercontent.com/wbyoung/jsi-gamelib/master/package.json"
+$.ajax(url, { dataType: 'json'})
+	.then(function(data, status, xhr) {
+			console.log(xhr);
+			console.log('success(promises): ' + data.name);
+	}, function(xhr, status, error) {
+			console.log('failed (promises): ' + error);
+	});
+</script>
+  
+</body>
+
+</html>

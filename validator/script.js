@@ -1,13 +1,15 @@
 $(function() {
+'use strict';
 
-
-
-	$( "form" ).submit(function( event ) {
-		console.log('submit');
-		var a = $("input[name='name']");
-		console.log(a);
+	$('form').submit(function(event) {
+		var nameField = $("input[name='name']");
+		var cityField = $("input[name='city']");
+		var stateField = $("input[name='state']");
+		if(nameField.val() === '' || stateField.val() === '' || cityField.val() === '')
+			alert('Please complete all fields.');	
 		event.preventDefault();
 	});
+	
 });
 
 
